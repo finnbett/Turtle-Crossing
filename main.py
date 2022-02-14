@@ -16,9 +16,9 @@ car_manager = CarManager()
 scoreboard = Scoreboard()
 
 game_is_on = True
-
+game_speed = 0.1
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(game_speed)
     screen.update()
     car_manager.create_car()
     car_manager.cars_move()
@@ -26,6 +26,7 @@ while game_is_on:
     if bob.ycor() > 270:
         bob.goto(player.STARTING_POSITION)
         scoreboard.level_up()
+        game_speed *= 0.5
 
     for car in car_manager.all_cars:
         if bob.distance(car) < 30:
