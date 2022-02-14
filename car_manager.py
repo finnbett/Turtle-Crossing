@@ -16,7 +16,7 @@ class CarManager:
         random_chance = random.randint(1,6)
         if random_chance == 1:
 
-            RANDOM_Y_LIST = [-200, -150, -100, -50, 0, 50, 100, 150, 200]
+            RANDOM_Y_LIST = [-200, -130, -60, 10, 80, 150, 220]
             RANDOM_Y = random.choice(RANDOM_Y_LIST)
             X_START = 300
             new_car = Turtle("square")
